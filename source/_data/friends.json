@@ -1,19 +1,25 @@
 [{
-    "avatar": "http://image.luokangyuan.com/1_qq_27922023.jpg",
-    "name": "码酱",
-    "introduction": "我不是大佬，只是在追寻大佬的脚步",
-    "url": "http://luokangyuan.com/",
+    "avatar": "https://b-gold-cdn.xitu.io/v3/static/img/timeline.e011f09.png",
+    "name": "掘金",
+    "introduction": "一个帮助开发者成长的社区",
+    "url": "https://juejin.im/timeline",
     "title": "前去学习"
 }, {
-    "avatar": "http://image.luokangyuan.com/4027734.jpeg",
-    "name": "闪烁之狐",
-    "introduction": "编程界大佬，技术牛，人还特别好，不懂的都可以请教大佬",
-    "url": "https://blinkfox.github.io/",
+    "avatar": "https://gss2.bdstatic.com/-fo3dSag_xI4khGkpoWK1HF6hhy/baike/s%3D220/sign=a7681484c3cec3fd8f3ea077e689d4b6/f636afc379310a55ad6337bcb74543a982261036.jpg",
+    "name": "玩Android",
+    "introduction": "每天优质文章推荐",
+    "url": "https://www.wanandroid.com/index",
     "title": "前去学习"
 }, {
-    "avatar": "http://image.luokangyuan.com/avatar.jpg",
-    "name": "ja_rome",
-    "introduction": "平凡的脚步也可以走出伟大的行程",
-    "url": "ttps://me.csdn.net/jlh912008548",
+    "avatar": "https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=539758193,20783679&fm=27&gp=0.jpg",
+    "name": "谷歌开发者",
+    "introduction": "总有你想看的",
+    "url": "https://developers.google.cn/",
+    "title": "前去学习"
+}, {
+    "avatar": "https://cdn.jsdelivr.net/gh/flutterchina/website@1.0/images/flutter-mark-square-100.png",
+    "name": "Flutter中文网",
+    "introduction": "Flutter官网的一个中文镜像",
+    "url": "https://flutterchina.club/",
     "title": "前去学习"
 }]

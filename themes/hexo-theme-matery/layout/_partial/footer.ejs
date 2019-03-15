@@ -1,0 +1,16 @@
+<footer class="page-footer bg-color">
+    <div class="container row center-align">
+        <div class="col s12 m12 l12 copy-right">
+            &copy;&nbsp;<a href="https://zjloong.github.io/" target="_blank">四月一号</a>
+            &nbsp;&nbsp;<span><%- partial('_partial/social-link') %></span>
+            <% if (theme.wordCount.enable && theme.wordCount.totalCount) { %>
+                &nbsp;&nbsp;&nbsp;<i class="fa fa-area-chart"></i>&nbsp;总字数:&nbsp;
+                <span class="white-color"><%= totalcount(site) %></span>
+            <% } %>
+            <br>Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a> 
+            &nbsp;|&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">hexo-theme-matery</a>
+            <% let socialClass = '' %>
+        </div>
+    </div>
+</footer>
+<div class="progress-bar"></div>

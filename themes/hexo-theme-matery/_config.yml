@@ -215,13 +215,13 @@ postCalendar: true
 # the Gitalk config，default disabled
 # Gitalk 评论模块的配置，默认为不激活
 gitalk:
-  enable: false
-  owner:
-  repo:
+  enable: true
+  owner: zjloong
+  repo: zjloong.github.io
   oauth:
-    clientId:
-    clientSecret:
-  admin:
+    clientId: cf4bb73e2aa1e434f73c
+    clientSecret: cbc552dce877c207629594d5be8e74cd23092f24
+  admin: zjloong
 
 # the Gitment config，default disabled
 # Gitment 评论模块的配置，默认为不激活

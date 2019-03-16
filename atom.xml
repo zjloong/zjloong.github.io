@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-15T06:35:42.356Z</updated>
+  <updated>2019-03-16T05:29:52.776Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,39 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>自定义View-测量</title>
+    <link href="http://yoursite.com/2019/03/16/zi-ding-yi-view-ce-liang/"/>
+    <id>http://yoursite.com/2019/03/16/zi-ding-yi-view-ce-liang/</id>
+    <published>2019-03-16T01:49:42.000Z</published>
+    <updated>2019-03-16T05:29:52.776Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;自定义View-测量&quot;&gt;&lt;a href=&quot;#自定义View-测量&quot; class=&quot;headerlink&quot; title=&quot;自定义View-测量&quot;&gt;&lt;/a&gt;自定义View-测量&lt;/h1&gt;&lt;p&gt;作为一名Android开发者, 自定义View是一项必须要掌握的技能.
+        
+      
+    
+    </summary>
+    
+      <category term="Android" scheme="http://yoursite.com/categories/Android/"/>
+    
+    
+      <category term="Android" scheme="http://yoursite.com/tags/Android/"/>
+    
+      <category term="View" scheme="http://yoursite.com/tags/View/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hello World</title>
     <link href="http://yoursite.com/2019/03/15/hello-world/"/>
     <id>http://yoursite.com/2019/03/15/hello-world/</id>
-    <published>2019-03-15T06:35:42.356Z</published>
-    <updated>2019-03-15T06:35:42.356Z</updated>
+    <published>2019-03-15T05:33:25.000Z</published>
+    <updated>2019-03-16T05:31:51.118Z</updated>
     
     <summary type="html">
     
@@ -35,6 +63,8 @@
     
     </summary>
     
+    
+      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
     
   </entry>
   

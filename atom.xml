@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-16T05:29:52.776Z</updated>
+  <updated>2019-03-16T16:00:43.315Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>自定义View-布局</title>
+    <link href="http://yoursite.com/2019/03/16/zi-ding-yi-view-bu-ju/"/>
+    <id>http://yoursite.com/2019/03/16/zi-ding-yi-view-bu-ju/</id>
+    <published>2019-03-16T15:43:59.000Z</published>
+    <updated>2019-03-16T16:00:43.315Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;自定义View-布局&quot;&gt;&lt;a href=&quot;#自定义View-布局&quot; class=&quot;headerlink&quot; title=&quot;自定义View-布局&quot;&gt;&lt;/a&gt;自定义View-布局&lt;/h1&gt;&lt;p&gt;自定义View(ViewGroup)时,
+        
+      
+    
+    </summary>
+    
+      <category term="Android" scheme="http://yoursite.com/categories/Android/"/>
+    
+    
+      <category term="Android" scheme="http://yoursite.com/tags/Android/"/>
+    
+      <category term="View" scheme="http://yoursite.com/tags/View/"/>
+    
+  </entry>
   
   <entry>
     <title>自定义View-测量</title>

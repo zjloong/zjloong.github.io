@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-17T06:28:32.706Z</updated>
+  <updated>2019-03-17T08:53:36.943Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>自定义View(4)-绘制(Path)</title>
+    <link href="http://yoursite.com/2019/03/17/android/zi-ding-yi-view-4-hui-zhi-path/"/>
+    <id>http://yoursite.com/2019/03/17/android/zi-ding-yi-view-4-hui-zhi-path/</id>
+    <published>2019-03-17T08:09:09.000Z</published>
+    <updated>2019-03-17T08:53:36.943Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Canvas 中除了一系列绘制点、线、基础集合图形、图片、文字的方法, 还有一个非常有用的方法 drawPath. 利用 Path, 除了能实现类似前面所说的这些功能, 还可以构建一些更加复杂的图形.&lt;/p&gt;
+&lt;h2 id=&quot;drawPath&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="Android" scheme="http://yoursite.com/categories/Android/"/>
+    
+    
+      <category term="View" scheme="http://yoursite.com/tags/View/"/>
+    
+      <category term="Canvas" scheme="http://yoursite.com/tags/Canvas/"/>
+    
+      <category term="Path" scheme="http://yoursite.com/tags/Path/"/>
+    
+  </entry>
   
   <entry>
     <title>自定义View(3)-绘制(Canvas)</title>

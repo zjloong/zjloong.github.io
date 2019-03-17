@@ -1,6 +1,6 @@
 ---
 title: 自定义View(2)-布局
-top: true
+top: false
 cover: true
 categories: Android
 tags:

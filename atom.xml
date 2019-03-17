@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-17T01:18:38.574Z</updated>
+  <updated>2019-03-17T06:04:21.594Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,39 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>自定义View(3)-绘制(Canvas)</title>
+    <link href="http://yoursite.com/2019/03/17/android/zi-ding-yi-view-3-hui-zhi-canvas/"/>
+    <id>http://yoursite.com/2019/03/17/android/zi-ding-yi-view-3-hui-zhi-canvas/</id>
+    <published>2019-03-17T01:28:28.000Z</published>
+    <updated>2019-03-17T06:04:21.594Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;经过 &lt;a href=&quot;http://zjloong.github.io/2019/03/16/android/zi-ding-yi-view-1-ce-liang/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;onMeasure()&lt;/a&gt; 和 &lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="Android" scheme="http://yoursite.com/categories/Android/"/>
+    
+    
+      <category term="View" scheme="http://yoursite.com/tags/View/"/>
+    
+      <category term="Canvas" scheme="http://yoursite.com/tags/Canvas/"/>
+    
+  </entry>
+  
+  <entry>
     <title>自定义View(2)-布局</title>
     <link href="http://yoursite.com/2019/03/16/android/zi-ding-yi-view-2-bu-ju/"/>
     <id>http://yoursite.com/2019/03/16/android/zi-ding-yi-view-2-bu-ju/</id>
     <published>2019-03-16T15:43:59.000Z</published>
-    <updated>2019-03-17T01:18:38.574Z</updated>
+    <updated>2019-03-17T01:20:21.599Z</updated>
     
     <summary type="html">
     

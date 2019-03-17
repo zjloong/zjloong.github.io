@@ -938,25 +938,27 @@ onLayoutonLayout 是 ViewGroup中的一个抽象方法, 因此所有的">
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
-            </div>
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/03/16/android/zi-ding-yi-view-2-bu-ju/">
+                <a href="/2019/03/17/android/zi-ding-yi-view-3-hui-zhi-canvas/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="自定义View(2)-布局">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="自定义View(3)-绘制(Canvas)">
                         
-                        <span class="card-title">自定义View(2)-布局</span>
+                        <span class="card-title">自定义View(3)-绘制(Canvas)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">在 自定义View(1)-测量中已经讲过 onMeasure,  而onLayout的内容也不多. 因此下面结合二者, 通过几个实际案例说明它们的作用.
-onLayoutonLayout 是 ViewGroup中的一个抽象方法, 因此所有的</div>
+                    <div class="summary">经过 onMeasure() 和 onLayout() 之后, View里显示到屏幕上, 还差最后一步 – 绘制.
+绘制的顺序
+View 的绘制
+// View 的绘制, 在 draw() 方法中完成
+public void draw(Ca</div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-03-16
-                            </span>
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-03-17
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -969,12 +971,15 @@ onLayoutonLayout 是 ViewGroup中的一个抽象方法, 因此所有的</div>
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
                     <a href="/tags/View/" target="_blank">
                         <span class="chip bg-color">View</span>
+                    </a>
+                    
+                    <a href="/tags/Canvas/" target="_blank">
+                        <span class="chip bg-color">Canvas</span>
                     </a>
                     
                 </div>
@@ -1160,7 +1165,7 @@ onLayoutonLayout 是 ViewGroup中的一个抽象方法, 因此所有的</div>
 </span>
             
                 &nbsp;&nbsp;&nbsp;<i class="fa fa-area-chart"></i>&nbsp;总字数:&nbsp;
-                <span class="white-color">3k</span>
+                <span class="white-color">5.4k</span>
             
             <br>Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a> 
             &nbsp;|&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">hexo-theme-matery</a>

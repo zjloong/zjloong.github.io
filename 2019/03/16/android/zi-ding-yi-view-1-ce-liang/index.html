@@ -4,8 +4,9 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="自定义View-测量, 四月一号">
-    <meta name="description" content="自定义View-测量作为一名Android开发者, 自定义View是一项必须要掌握的技能. 虽然Github上已经有各种各样丰富的轮子, 可以满足日常开发中绝大多数需求. 但只有掌握了相关的原理, 才能让我们在碰到一些比较特殊的需求时, 不">
+    <meta name="keywords" content="自定义View(1)-测量, 四月一号">
+    <meta name="description" content="为什么要了解自定义控件自定义控件是一项Android开发中必须要掌握的技能. 虽然Github上有各种现成的轮子, 可以满足日常开发中的大部分需求. 但实际开发中, 各种情况都可能发生, 只有掌握了相关原理, 才能更好的应对各种场景. 
+一">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>自定义View-测量 | 四月一号</title>
+    <title>自定义View(1)-测量 | 四月一号</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -24,6 +25,10 @@
     <link rel="stylesheet" type="text/css" href="/css/matery.css">
     <link rel="stylesheet" type="text/css" href="/css/my.css">
     <style type="text/css">
+        
+        code[class*="language-"], pre[class*="language-"] {
+            white-space: pre !important;
+        }
         
     </style>
 
@@ -257,13 +262,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        自定义View-测量
+                        自定义View(1)-测量
                     </div>
                 </div>
             </div>
@@ -374,10 +379,6 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Android/" target="_blank">
-                                <span class="chip bg-color">Android</span>
-                            </a>
-                        
                             <a href="/tags/View/" target="_blank">
                                 <span class="chip bg-color">View</span>
                             </a>
@@ -409,7 +410,7 @@
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        1.5k
+                        1.4k
                     </div>
                     
 
@@ -432,21 +433,21 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="自定义View-测量"><a href="#自定义View-测量" class="headerlink" title="自定义View-测量"></a>自定义View-测量</h1><p>作为一名Android开发者, 自定义View是一项必须要掌握的技能. 虽然Github上已经有各种各样丰富的轮子, 可以满足日常开发中绝大多数需求. 但只有掌握了相关的原理, 才能让我们在碰到一些比较特殊的需求时, 不会过于被动.</p>
-<p>在Android中View从创建到显示到屏幕, 需要经过三个步骤:</p>
+                <h2 id="为什么要了解自定义控件"><a href="#为什么要了解自定义控件" class="headerlink" title="为什么要了解自定义控件"></a>为什么要了解自定义控件</h2><p>自定义控件是一项Android开发中必须要掌握的技能. 虽然Github上有各种现成的轮子, 可以满足日常开发中的大部分需求. 但实际开发中, 各种情况都可能发生, 只有掌握了相关原理, 才能更好的应对各种场景. </p>
+<p>一个完整的自定义控件, 主要包含下面三个步骤:</p>
 <ul>
-<li><strong>测量: </strong> 确定大小</li>
-<li><strong>布局: </strong> 确定位置</li>
-<li><strong>绘制: </strong> 确定内容</li>
+<li>onMeasure: 测量子View和自己的宽高</li>
+<li>onLayout: 将子View布局到指定的位置</li>
+<li>onDraw: 绘制内容</li>
 </ul>
-<p>测量作为三部曲中的第一步, 重要性不言而喻. 首先我们要知道一点, Android中的View都是矩形. 包括图片(ImageView)、文字(TextView)、…各种列表、容器,<br>不管它外在的表现形式是什么, 它们的本质, 都是屏幕上一个一个矩形. 而测量的作用, 就是确定矩形的宽高.</p>
-<h2 id="onMeasure"><a href="#onMeasure" class="headerlink" title="onMeasure"></a>onMeasure</h2><p>我们知道, 在定义一个View时, 关于测量的逻辑, 就在下面这个方法中完成</p>
+<p>onMeasure作为需要我们处理的第一个步骤, 重要性不言而喻. 首先我们要知道一点, Android中的View都是矩形. 包括图片(ImageView)、文字(TextView)、…各种列表、容器,<br>不管它外在的表现形式是什么, 它们的本质, 都是屏幕上一个一个矩形. 而测量的作用, 就是确定矩形的宽高.</p>
+<h2 id="onMeasure"><a href="#onMeasure" class="headerlink" title="onMeasure"></a>onMeasure</h2><p>onMeasure 是 View 里面的一个方法:</p>
 <pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@Override</span>
 <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">onMeasure</span><span class="token punctuation">(</span><span class="token keyword">int</span> widthMeasureSpec<span class="token punctuation">,</span> <span class="token keyword">int</span> heightMeasureSpec<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">onMeasure</span><span class="token punctuation">(</span>widthMeasureSpec<span class="token punctuation">,</span> heightMeasureSpec<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p><strong><em>onMeasure()</em></strong>中的两个参数<strong><em>widthMeasureSpec, heightMeasureSpec</em></strong>是指什么? int类型, 难道就是指宽高吗? 事实上它们确实和宽高有关, 但情况没那么简单, 要了解这两个参数, 就必须来谈谈 <strong>MeasureSpec</strong>.</p>
+<p>该方法有两个 int 类型的参数<strong><em>widthMeasureSpec, heightMeasureSpec</em></strong>. 实际上它们确实和宽高有关, 但并不仅仅指宽高, 要了解这两个参数, 就必须先了解 <strong>MeasureSpec</strong>.</p>
 <h2 id="MeasureSpec"><a href="#MeasureSpec" class="headerlink" title="MeasureSpec"></a>MeasureSpec</h2><p>MeasureSpec是View的静态内部类, 其中主要有三个属性和三个方法我们需要了解</p>
 <pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">// 测量模式-无限制. 子View想要多大就多大, 一般用于ScrollView等滑动控件, 大部门情况下, 我们可以不用考虑</span>
 <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token keyword">int</span> UNSPECIFIED <span class="token operator">=</span> <span class="token number">0</span> <span class="token operator">&lt;&lt;</span> MODE_SHIFT<span class="token punctuation">;</span>
@@ -474,7 +475,7 @@
     <span class="token keyword">return</span> <span class="token punctuation">(</span>measureSpec <span class="token operator">&amp;</span> <span class="token operator">~</span>MODE_MASK<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<h2 id="FramLayout测量步骤简析"><a href="#FramLayout测量步骤简析" class="headerlink" title="FramLayout测量步骤简析"></a>FramLayout测量步骤简析</h2><p>有了上面的初步认识, 下面可以通过简单的研究下系统源码, 来印证我们的想法. 以FramLayout为例</p>
+<h2 id="简析FramLayout测量步骤"><a href="#简析FramLayout测量步骤" class="headerlink" title="简析FramLayout测量步骤"></a>简析FramLayout测量步骤</h2><p>以FramLayout为例, 简单的看下它的测量逻辑, 看看MeasureSpec的具体用法(只保留关键代码):</p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">onMeasure</span><span class="token punctuation">(</span><span class="token keyword">int</span> widthMeasureSpec<span class="token punctuation">,</span> <span class="token keyword">int</span> heightMeasureSpec<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">int</span> count <span class="token operator">=</span> <span class="token function">getChildCount</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
@@ -571,7 +572,7 @@
         <span class="token keyword">return</span> MeasureSpec<span class="token punctuation">.</span><span class="token function">makeMeasureSpec</span><span class="token punctuation">(</span>resultSize<span class="token punctuation">,</span> resultMode<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 </code></pre>
-<p>总结上面的代码,  可以知道 子View的 MeasureSpec 取值分以下情况:</p>
+<p>总结一下子控件中 widthMeasureSpec 和 heightMeasureSpec 的计算规则:</p>
 <ul>
 <li>父View 的测量模式为 MeasureSpec.EXACTLY (固定值):<ul>
 <li>子View 的 layoutParams.width/height &gt;= 0, 即指定了具体的值:<pre class=" language-java"><code class="language-java">  MeasureSpec<span class="token punctuation">.</span><span class="token function">makeMeasureSpec</span><span class="token punctuation">(</span>layoutParams<span class="token punctuation">.</span>width<span class="token operator">/</span>height<span class="token punctuation">,</span> MeasureSpec<span class="token punctuation">.</span>EXACTLY<span class="token punctuation">)</span>
@@ -610,20 +611,21 @@
 </ul>
 </li>
 </ul>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>通过上面的分析, 在自定义ViewGroup/View时, 在测量步骤中, 大致流程如下</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>通过上面的分析, 在自定义控件时, 在测量步骤中, 大致流程如下</p>
 <ol>
 <li>如果是自定义View,  只需要结合其MeasureSpec以及具体的业务需求, 计算自己的宽高, 然后通过 setMeasuredDimension() 保存即可;</li>
 <li>如果是自定义ViewGroup, 那么测量步骤相对复杂一点;<ul>
-<li>第一步需要先对子View进行测量, 在这个过程中可能会用到一下API:<pre class=" language-java"><code class="language-java">ViewGroup<span class="token punctuation">.</span><span class="token function">measureChildren</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<li>第一步: 需要先测量子View宽高:</li>
+<li>第二步: 根据逻辑要求, 计算出自己的宽高, 然后通过  setMeasuredDimension()进行保存</li>
+</ul>
+</li>
+<li>系统为我们提供的关于测量的方法<pre class=" language-java"><code class="language-java">ViewGroup<span class="token punctuation">.</span><span class="token function">measureChildren</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 ViewGroup<span class="token punctuation">.</span><span class="token function">measureChild</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 ViewGroup<span class="token punctuation">.</span><span class="token function">measureChildWithMargins</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 ViewGroup<span class="token punctuation">.</span><span class="token function">getChildMeasureSpec</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token comment" spellcheck="true">// 根据传入的size, 和MeasureSpec, 返回一个合理的size</span>
 View<span class="token punctuation">.</span><span class="token function">resolveSize</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 </code></pre>
-</li>
-<li>根据逻辑要求, 计算出自己的宽高, 然后通过  setMeasuredDimension()进行保存</li>
-</ul>
 </li>
 </ol>
 
@@ -773,7 +775,7 @@ View<span class="token punctuation">.</span><span class="token function">resolve
                     </span>
                     <a href="http://yoursite.com" class="b-link-green">四月一号</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2019/03/16/zi-ding-yi-view-ce-liang/" class="b-link-green">自定义View-测量</a>
+                    <a href="/2019/03/16/android/zi-ding-yi-view-1-ce-liang/" class="b-link-green">自定义View(1)-测量</a>
                 </p>
             </div>
         </div>
@@ -820,20 +822,18 @@ View<span class="token punctuation">.</span><span class="token function">resolve
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/03/16/zi-ding-yi-view-bu-ju/">
+                <a href="/2019/03/16/android/zi-ding-yi-view-2-bu-ju/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="自定义View-布局">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="自定义View(2)-布局">
                         
-                        <span class="card-title">自定义View-布局</span>
+                        <span class="card-title">自定义View(2)-布局</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">自定义View-布局自定义View(ViewGroup)时, 我们通常需要实现下面三方方法
-
-onMeasure():  测量[子View和]自己的大小
-onLayout(): 使用View.layout()对子View进行布局, 只有Vi</div>
+                    <div class="summary">在 自定义View(1)-测量中已经讲过 onMeasure,  而onLayout的内容也不多. 因此下面结合二者, 通过几个实际案例说明它们的作用.
+onLayoutonLayout 是 ViewGroup中的一个抽象方法, 因此所有的</div>
                     <div class="publish-info">
                         <span class="publish-date">
                             <i class="fa fa-clock-o fa-fw icon-date"></i>2019-03-16
@@ -852,10 +852,6 @@ onLayout(): 使用View.layout()对子View进行布局, 只有Vi</div>
                 </div>
                 
                 <div class="card-action article-tags">
-                    
-                    <a href="/tags/Android/" target="_blank">
-                        <span class="chip bg-color">Android</span>
-                    </a>
                     
                     <a href="/tags/View/" target="_blank">
                         <span class="chip bg-color">View</span>
@@ -1039,7 +1035,7 @@ onLayout(): 使用View.layout()对子View进行布局, 只有Vi</div>
 </span>
             
                 &nbsp;&nbsp;&nbsp;<i class="fa fa-area-chart"></i>&nbsp;总字数:&nbsp;
-                <span class="white-color">3.1k</span>
+                <span class="white-color">3k</span>
             
             <br>Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a> 
             &nbsp;|&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">hexo-theme-matery</a>

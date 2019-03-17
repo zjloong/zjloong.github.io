@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-16T16:00:43.315Z</updated>
+  <updated>2019-03-17T01:18:38.574Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>自定义View-布局</title>
-    <link href="http://yoursite.com/2019/03/16/zi-ding-yi-view-bu-ju/"/>
-    <id>http://yoursite.com/2019/03/16/zi-ding-yi-view-bu-ju/</id>
+    <title>自定义View(2)-布局</title>
+    <link href="http://yoursite.com/2019/03/16/android/zi-ding-yi-view-2-bu-ju/"/>
+    <id>http://yoursite.com/2019/03/16/android/zi-ding-yi-view-2-bu-ju/</id>
     <published>2019-03-16T15:43:59.000Z</published>
-    <updated>2019-03-16T16:00:43.315Z</updated>
+    <updated>2019-03-17T01:18:38.574Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,7 @@
       
         
         
-          &lt;h1 id=&quot;自定义View-布局&quot;&gt;&lt;a href=&quot;#自定义View-布局&quot; class=&quot;headerlink&quot; title=&quot;自定义View-布局&quot;&gt;&lt;/a&gt;自定义View-布局&lt;/h1&gt;&lt;p&gt;自定义View(ViewGroup)时,
+          &lt;p&gt;在 &lt;a href=&quot;https://zjloong.github.io/2019/03/16/zi-ding-yi-view-ce-liang/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;自定义View(1)-测量&lt;/a&gt;中已经讲过
         
       
     
@@ -37,19 +37,17 @@
     
       <category term="Android" scheme="http://yoursite.com/categories/Android/"/>
     
-    
-      <category term="Android" scheme="http://yoursite.com/tags/Android/"/>
     
       <category term="View" scheme="http://yoursite.com/tags/View/"/>
     
   </entry>
   
   <entry>
-    <title>自定义View-测量</title>
-    <link href="http://yoursite.com/2019/03/16/zi-ding-yi-view-ce-liang/"/>
-    <id>http://yoursite.com/2019/03/16/zi-ding-yi-view-ce-liang/</id>
+    <title>自定义View(1)-测量</title>
+    <link href="http://yoursite.com/2019/03/16/android/zi-ding-yi-view-1-ce-liang/"/>
+    <id>http://yoursite.com/2019/03/16/android/zi-ding-yi-view-1-ce-liang/</id>
     <published>2019-03-16T01:49:42.000Z</published>
-    <updated>2019-03-16T05:29:52.776Z</updated>
+    <updated>2019-03-17T00:32:41.386Z</updated>
     
     <summary type="html">
     
@@ -57,7 +55,7 @@
       
         
         
-          &lt;h1 id=&quot;自定义View-测量&quot;&gt;&lt;a href=&quot;#自定义View-测量&quot; class=&quot;headerlink&quot; title=&quot;自定义View-测量&quot;&gt;&lt;/a&gt;自定义View-测量&lt;/h1&gt;&lt;p&gt;作为一名Android开发者, 自定义View是一项必须要掌握的技能.
+          &lt;h2 id=&quot;为什么要了解自定义控件&quot;&gt;&lt;a href=&quot;#为什么要了解自定义控件&quot; class=&quot;headerlink&quot; title=&quot;为什么要了解自定义控件&quot;&gt;&lt;/a&gt;为什么要了解自定义控件&lt;/h2&gt;&lt;p&gt;自定义控件是一项Android开发中必须要掌握的技能.
         
       
     
@@ -65,8 +63,6 @@
     
       <category term="Android" scheme="http://yoursite.com/categories/Android/"/>
     
-    
-      <category term="Android" scheme="http://yoursite.com/tags/Android/"/>
     
       <category term="View" scheme="http://yoursite.com/tags/View/"/>
     

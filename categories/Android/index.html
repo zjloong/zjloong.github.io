@@ -25,6 +25,10 @@
     <link rel="stylesheet" type="text/css" href="/css/my.css">
     <style type="text/css">
         
+        code[class*="language-"], pre[class*="language-"] {
+            white-space: pre !important;
+        }
+        
     </style>
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
@@ -313,21 +317,19 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
             
             <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2019/03/16/zi-ding-yi-view-bu-ju/">
+                    <a href="/2019/03/16/android/zi-ding-yi-view-2-bu-ju/">
                         <div class="card-image tag-image">
                             
                             
-                            <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="自定义View-布局">
+                            <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="自定义View(2)-布局">
                             
-                            <span class="card-title">自定义View-布局</span>
+                            <span class="card-title">自定义View(2)-布局</span>
                         </div>
                     </a>
                     <div class="card-content article-content">
                         <div class="summary">
                             
-                                自定义View-布局自定义View(ViewGroup)时, 我们通常需要实现下面三方方法
-
-onMeasure():  测量[子View和
+                                在 自定义View(1)-测量中已经讲过 onMeasure,  而onLayout的内容也不多. 因此下面结合二者, 通过几个实际案例说明
                             
                         </div>
                         <div class="publish-info">
@@ -349,10 +351,6 @@ onMeasure():  测量[子View和
 
                     
                     <div class="card-action article-tags">
-                        
-                        <a href="/tags/Android/" target="_blank">
-                            <span class="chip bg-color">Android</span>
-                        </a>
                         
                         <a href="/tags/View/" target="_blank">
                             <span class="chip bg-color">View</span>
@@ -365,19 +363,19 @@ onMeasure():  测量[子View和
             
             <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2019/03/16/zi-ding-yi-view-ce-liang/">
+                    <a href="/2019/03/16/android/zi-ding-yi-view-1-ce-liang/">
                         <div class="card-image tag-image">
                             
                             
-                            <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="自定义View-测量">
+                            <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="自定义View(1)-测量">
                             
-                            <span class="card-title">自定义View-测量</span>
+                            <span class="card-title">自定义View(1)-测量</span>
                         </div>
                     </a>
                     <div class="card-content article-content">
                         <div class="summary">
                             
-                                自定义View-测量作为一名Android开发者, 自定义View是一项必须要掌握的技能. 虽然Github上已经有各种各样丰富的轮子, 可
+                                为什么要了解自定义控件自定义控件是一项Android开发中必须要掌握的技能. 虽然Github上有各种现成的轮子, 可以满足日常开发中的大部
                             
                         </div>
                         <div class="publish-info">
@@ -399,10 +397,6 @@ onMeasure():  测量[子View和
 
                     
                     <div class="card-action article-tags">
-                        
-                        <a href="/tags/Android/" target="_blank">
-                            <span class="chip bg-color">Android</span>
-                        </a>
                         
                         <a href="/tags/View/" target="_blank">
                             <span class="chip bg-color">View</span>
@@ -447,7 +441,7 @@ onMeasure():  测量[子View和
 </span>
             
                 &nbsp;&nbsp;&nbsp;<i class="fa fa-area-chart"></i>&nbsp;总字数:&nbsp;
-                <span class="white-color">3.1k</span>
+                <span class="white-color">3k</span>
             
             <br>Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a> 
             &nbsp;|&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">hexo-theme-matery</a>

@@ -219,9 +219,10 @@ setPolyToPoly(float[] src, int srcIndex, float[] dst, int dstIndex, int pointCou
 ### 使用 Camera 来实现三维变换
 Camera 就是一个假想中的相机, 其默认位置View的左上角, 屏幕的上方. 可以将Camera理解为Unity中的光源, 我们在屏幕上最终看到的View, 就是Camera从它所在的视角'拍摄'出来的图片.
 - Camera的坐标系
-	|   原点  | x轴方向 | y轴方向 | z轴方向 |
-	| ------ | ------ | ------ |
-	| 在view的左上角 (0, 0, 0) | 向右为正 | 向上为正(和view的坐标系相反) | 向里为正 |
+	- 原点: 在view的左上角 (0, 0, 0)
+	- x轴方向: 向右为正
+	- y轴方向: 向上为正(和view的坐标系相反)
+	- z轴方向: 向里为正
 - Camera所在的坐标: 
 	- 默认坐标: (0, 0, -8) 即在view的左上角向屏幕方向 8英寸处(一英尺 = 72px) 
 	- 设置Camera的坐标:

@@ -609,7 +609,13 @@ canvas<span class="token punctuation">.</span><span class="token function">resto
 </ul>
 <h3 id="使用-Camera-来实现三维变换"><a href="#使用-Camera-来实现三维变换" class="headerlink" title="使用 Camera 来实现三维变换"></a>使用 Camera 来实现三维变换</h3><p>Camera 就是一个假想中的相机, 其默认位置View的左上角, 屏幕的上方. 可以将Camera理解为Unity中的光源, 我们在屏幕上最终看到的View, 就是Camera从它所在的视角’拍摄’出来的图片.</p>
 <ul>
-<li>Camera的坐标系<br>  |   原点  | x轴方向 | y轴方向 | z轴方向 |<br>  | —— | —— | —— |<br>  | 在view的左上角 (0, 0, 0) | 向右为正 | 向上为正(和view的坐标系相反) | 向里为正 |</li>
+<li>Camera的坐标系<ul>
+<li>原点: 在view的左上角 (0, 0, 0)</li>
+<li>x轴方向: 向右为正</li>
+<li>y轴方向: 向上为正(和view的坐标系相反)</li>
+<li>z轴方向: 向里为正</li>
+</ul>
+</li>
 <li>Camera所在的坐标: <ul>
 <li>默认坐标: (0, 0, -8) 即在view的左上角向屏幕方向 8英寸处(一英尺 = 72px) </li>
 <li>设置Camera的坐标:<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">// 实际使用中一般 x, y都传 0, 修改z的值(远小近大, 注意单位是 英寸), 因为平面的移动一般考canvas实现</span>

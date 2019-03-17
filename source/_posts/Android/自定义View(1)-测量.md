@@ -1,10 +1,9 @@
 ---
-title: 自定义View-测量
+title: 自定义View(1)-测量
 top: true
 cover: true
 categories: Android
 tags:
-  - Android
   - View
 date: 2019-03-16 09:49:42
 img:
@@ -12,26 +11,26 @@ coverImg:
 summary:
 ---
 
-# 自定义View-测量
-作为一名Android开发者, 自定义View是一项必须要掌握的技能. 虽然Github上已经有各种各样丰富的轮子, 可以满足日常开发中绝大多数需求. 但只有掌握了相关的原理, 才能让我们在碰到一些比较特殊的需求时, 不会过于被动.
+## 为什么要了解自定义控件
+自定义控件是一项Android开发中必须要掌握的技能. 虽然Github上有各种现成的轮子, 可以满足日常开发中的大部分需求. 但实际开发中, 各种情况都可能发生, 只有掌握了相关原理, 才能更好的应对各种场景. 
 
-在Android中View从创建到显示到屏幕, 需要经过三个步骤:
-* **测量: ** 确定大小
-* **布局: ** 确定位置
-* **绘制: ** 确定内容
+一个完整的自定义控件, 主要包含下面三个步骤:
+- onMeasure: 测量子View和自己的宽高
+- onLayout: 将子View布局到指定的位置
+- onDraw: 绘制内容
 
-测量作为三部曲中的第一步, 重要性不言而喻. 首先我们要知道一点, Android中的View都是矩形. 包括图片(ImageView)、文字(TextView)、...各种列表、容器,
+onMeasure作为需要我们处理的第一个步骤, 重要性不言而喻. 首先我们要知道一点, Android中的View都是矩形. 包括图片(ImageView)、文字(TextView)、...各种列表、容器,
 不管它外在的表现形式是什么, 它们的本质, 都是屏幕上一个一个矩形. 而测量的作用, 就是确定矩形的宽高.
 
 ## onMeasure
-我们知道, 在定义一个View时, 关于测量的逻辑, 就在下面这个方法中完成
+onMeasure 是 View 里面的一个方法:
 ```java
 @Override
 protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
 	super.onMeasure(widthMeasureSpec, heightMeasureSpec);
 }
 ```
-***onMeasure()***中的两个参数***widthMeasureSpec, heightMeasureSpec***是指什么? int类型, 难道就是指宽高吗? 事实上它们确实和宽高有关, 但情况没那么简单, 要了解这两个参数, 就必须来谈谈 **MeasureSpec**.
+该方法有两个 int 类型的参数***widthMeasureSpec, heightMeasureSpec***. 实际上它们确实和宽高有关, 但并不仅仅指宽高, 要了解这两个参数, 就必须先了解 **MeasureSpec**.
 
 ## MeasureSpec
 MeasureSpec是View的静态内部类, 其中主要有三个属性和三个方法我们需要了解
@@ -63,8 +62,8 @@ public static int getSize(int measureSpec) {
 }
 ```
 
-## FramLayout测量步骤简析
-有了上面的初步认识, 下面可以通过简单的研究下系统源码, 来印证我们的想法. 以FramLayout为例
+## 简析FramLayout测量步骤
+以FramLayout为例, 简单的看下它的测量逻辑, 看看MeasureSpec的具体用法(只保留关键代码):
 ```java
 protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
 	int count = getChildCount();
@@ -164,7 +163,7 @@ public static int getChildMeasureSpec(int spec, int padding, int childDimension)
     }
 ```
 
-总结上面的代码,  可以知道 子View的 MeasureSpec 取值分以下情况:
+总结一下子控件中 widthMeasureSpec 和 heightMeasureSpec 的计算规则:
 * 父View 的测量模式为 MeasureSpec.EXACTLY (固定值):
 	* 子View 的 layoutParams.width/height >= 0, 即指定了具体的值:
 	 ```java
@@ -206,16 +205,18 @@ public static int getChildMeasureSpec(int spec, int padding, int childDimension)
 	```
 
 ## 总结
-通过上面的分析, 在自定义ViewGroup/View时, 在测量步骤中, 大致流程如下
+通过上面的分析, 在自定义控件时, 在测量步骤中, 大致流程如下
 1. 如果是自定义View,  只需要结合其MeasureSpec以及具体的业务需求, 计算自己的宽高, 然后通过 setMeasuredDimension() 保存即可;
 2. 如果是自定义ViewGroup, 那么测量步骤相对复杂一点;
-	* 第一步需要先对子View进行测量, 在这个过程中可能会用到一下API:
-	```java
-	ViewGroup.measureChildren()
-	ViewGroup.measureChild()
-	ViewGroup.measureChildWithMargins()
-	ViewGroup.getChildMeasureSpec()
-	// 根据传入的size, 和MeasureSpec, 返回一个合理的size
-	View.resolveSize()
-	```
-	* 根据逻辑要求, 计算出自己的宽高, 然后通过  setMeasuredDimension()进行保存
+	- 第一步: 需要先测量子View宽高:
+    - 第二步: 根据逻辑要求, 计算出自己的宽高, 然后通过  setMeasuredDimension()进行保存
+3. 系统为我们提供的关于测量的方法
+```java
+ViewGroup.measureChildren()
+ViewGroup.measureChild()
+ViewGroup.measureChildWithMargins()
+ViewGroup.getChildMeasureSpec()
+// 根据传入的size, 和MeasureSpec, 返回一个合理的size
+View.resolveSize()
+```
+	

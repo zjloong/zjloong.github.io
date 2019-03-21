@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-18T13:37:13.389Z</updated>
+  <updated>2019-03-21T13:12:00.107Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,42 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>自定义View(5)-drawText</title>
-    <link href="http://yoursite.com/2019/03/18/android/zi-ding-yi-view-5-wen-ben-hui-zhi/"/>
-    <id>http://yoursite.com/2019/03/18/android/zi-ding-yi-view-5-wen-ben-hui-zhi/</id>
+    <title>自定义View(六)--Paint</title>
+    <link href="http://yoursite.com/2019/03/21/android/zi-ding-yi-view-liu-paint/"/>
+    <id>http://yoursite.com/2019/03/21/android/zi-ding-yi-view-liu-paint/</id>
+    <published>2019-03-21T13:11:16.000Z</published>
+    <updated>2019-03-21T13:12:00.107Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;构造方法&quot;&gt;&lt;a href=&quot;#构造方法&quot; class=&quot;headerlink&quot; title=&quot;构造方法&quot;&gt;&lt;/a&gt;构造方法&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;直接构造方法&lt;pre class=&quot; language-java&quot;&gt;&lt;code
+        
+      
+    
+    </summary>
+    
+      <category term="Android" scheme="http://yoursite.com/categories/Android/"/>
+    
+    
+      <category term="View" scheme="http://yoursite.com/tags/View/"/>
+    
+      <category term="Canvas" scheme="http://yoursite.com/tags/Canvas/"/>
+    
+      <category term="Paint" scheme="http://yoursite.com/tags/Paint/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>自定义View(五)--drawText</title>
+    <link href="http://yoursite.com/2019/03/18/android/zi-ding-yi-view-wu-drawtext/"/>
+    <id>http://yoursite.com/2019/03/18/android/zi-ding-yi-view-wu-drawtext/</id>
     <published>2019-03-18T13:37:09.000Z</published>
-    <updated>2019-03-18T13:37:13.389Z</updated>
+    <updated>2019-03-19T00:24:50.257Z</updated>
     
     <summary type="html">
     
@@ -48,11 +79,11 @@
   </entry>
   
   <entry>
-    <title>自定义View(4)-绘制(Path)</title>
-    <link href="http://yoursite.com/2019/03/17/android/zi-ding-yi-view-4-hui-zhi-path/"/>
-    <id>http://yoursite.com/2019/03/17/android/zi-ding-yi-view-4-hui-zhi-path/</id>
+    <title>自定义View(四)--Path</title>
+    <link href="http://yoursite.com/2019/03/17/android/zi-ding-yi-view-si-path/"/>
+    <id>http://yoursite.com/2019/03/17/android/zi-ding-yi-view-si-path/</id>
     <published>2019-03-17T08:09:09.000Z</published>
-    <updated>2019-03-17T08:53:36.943Z</updated>
+    <updated>2019-03-19T00:25:45.818Z</updated>
     
     <summary type="html">
     
@@ -79,11 +110,11 @@
   </entry>
   
   <entry>
-    <title>自定义View(3)-绘制(Canvas)</title>
-    <link href="http://yoursite.com/2019/03/17/android/zi-ding-yi-view-3-hui-zhi-canvas/"/>
-    <id>http://yoursite.com/2019/03/17/android/zi-ding-yi-view-3-hui-zhi-canvas/</id>
+    <title>自定义View(三)--Canvas</title>
+    <link href="http://yoursite.com/2019/03/17/android/zi-ding-yi-view-san-canvas/"/>
+    <id>http://yoursite.com/2019/03/17/android/zi-ding-yi-view-san-canvas/</id>
     <published>2019-03-17T01:28:28.000Z</published>
-    <updated>2019-03-17T06:28:32.706Z</updated>
+    <updated>2019-03-19T00:25:32.769Z</updated>
     
     <summary type="html">
     
@@ -107,11 +138,11 @@
   </entry>
   
   <entry>
-    <title>自定义View(2)-布局</title>
-    <link href="http://yoursite.com/2019/03/16/android/zi-ding-yi-view-2-bu-ju/"/>
-    <id>http://yoursite.com/2019/03/16/android/zi-ding-yi-view-2-bu-ju/</id>
+    <title>自定义View(二)--onLayout</title>
+    <link href="http://yoursite.com/2019/03/16/android/zi-ding-yi-view-er-onlayout/"/>
+    <id>http://yoursite.com/2019/03/16/android/zi-ding-yi-view-er-onlayout/</id>
     <published>2019-03-16T15:43:59.000Z</published>
-    <updated>2019-03-17T06:06:47.904Z</updated>
+    <updated>2019-03-19T00:25:20.147Z</updated>
     
     <summary type="html">
     
@@ -133,11 +164,11 @@
   </entry>
   
   <entry>
-    <title>自定义View(1)-测量</title>
-    <link href="http://yoursite.com/2019/03/16/android/zi-ding-yi-view-1-ce-liang/"/>
-    <id>http://yoursite.com/2019/03/16/android/zi-ding-yi-view-1-ce-liang/</id>
+    <title>自定义View(一)--onMeasure</title>
+    <link href="http://yoursite.com/2019/03/16/android/zi-ding-yi-view-yi-onmeasure/"/>
+    <id>http://yoursite.com/2019/03/16/android/zi-ding-yi-view-yi-onmeasure/</id>
     <published>2019-03-16T01:49:42.000Z</published>
-    <updated>2019-03-17T06:07:04.448Z</updated>
+    <updated>2019-03-19T00:25:04.482Z</updated>
     
     <summary type="html">
     

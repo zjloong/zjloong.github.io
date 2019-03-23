@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-21T13:12:00.107Z</updated>
+  <updated>2019-03-23T16:19:04.811Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Handler消息机制</title>
+    <link href="http://yoursite.com/2019/03/23/android/framwrok/handler-xiao-xi-ji-zhi/"/>
+    <id>http://yoursite.com/2019/03/23/android/framwrok/handler-xiao-xi-ji-zhi/</id>
+    <published>2019-03-23T15:25:59.000Z</published>
+    <updated>2019-03-23T16:19:04.811Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;说起Android的消息处理机制, Handler肯定是无法被忽略的一个点. 通过Handler收发消息可以非常方便的实现线程间通信功能.&lt;/p&gt;
+&lt;h3 id=&quot;Handler的基本使用方式&quot;&gt;&lt;a href=&quot;#Handler的基本使用方式&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Android" scheme="http://yoursite.com/categories/Android/"/>
+    
+    
+      <category term="Handler" scheme="http://yoursite.com/tags/Handler/"/>
+    
+  </entry>
+  
+  <entry>
     <title>自定义View(六)--Paint</title>
-    <link href="http://yoursite.com/2019/03/21/android/zi-ding-yi-view-liu-paint/"/>
-    <id>http://yoursite.com/2019/03/21/android/zi-ding-yi-view-liu-paint/</id>
+    <link href="http://yoursite.com/2019/03/21/android/zi-ding-yi-kong-jian/zi-ding-yi-view-liu-paint/"/>
+    <id>http://yoursite.com/2019/03/21/android/zi-ding-yi-kong-jian/zi-ding-yi-view-liu-paint/</id>
     <published>2019-03-21T13:11:16.000Z</published>
-    <updated>2019-03-21T13:12:00.107Z</updated>
+    <updated>2019-03-23T15:58:56.192Z</updated>
     
     <summary type="html">
     
@@ -49,8 +76,8 @@
   
   <entry>
     <title>自定义View(五)--drawText</title>
-    <link href="http://yoursite.com/2019/03/18/android/zi-ding-yi-view-wu-drawtext/"/>
-    <id>http://yoursite.com/2019/03/18/android/zi-ding-yi-view-wu-drawtext/</id>
+    <link href="http://yoursite.com/2019/03/18/android/zi-ding-yi-kong-jian/zi-ding-yi-view-wu-drawtext/"/>
+    <id>http://yoursite.com/2019/03/18/android/zi-ding-yi-kong-jian/zi-ding-yi-view-wu-drawtext/</id>
     <published>2019-03-18T13:37:09.000Z</published>
     <updated>2019-03-19T00:24:50.257Z</updated>
     
@@ -80,8 +107,8 @@
   
   <entry>
     <title>自定义View(四)--Path</title>
-    <link href="http://yoursite.com/2019/03/17/android/zi-ding-yi-view-si-path/"/>
-    <id>http://yoursite.com/2019/03/17/android/zi-ding-yi-view-si-path/</id>
+    <link href="http://yoursite.com/2019/03/17/android/zi-ding-yi-kong-jian/zi-ding-yi-view-si-path/"/>
+    <id>http://yoursite.com/2019/03/17/android/zi-ding-yi-kong-jian/zi-ding-yi-view-si-path/</id>
     <published>2019-03-17T08:09:09.000Z</published>
     <updated>2019-03-19T00:25:45.818Z</updated>
     
@@ -111,8 +138,8 @@
   
   <entry>
     <title>自定义View(三)--Canvas</title>
-    <link href="http://yoursite.com/2019/03/17/android/zi-ding-yi-view-san-canvas/"/>
-    <id>http://yoursite.com/2019/03/17/android/zi-ding-yi-view-san-canvas/</id>
+    <link href="http://yoursite.com/2019/03/17/android/zi-ding-yi-kong-jian/zi-ding-yi-view-san-canvas/"/>
+    <id>http://yoursite.com/2019/03/17/android/zi-ding-yi-kong-jian/zi-ding-yi-view-san-canvas/</id>
     <published>2019-03-17T01:28:28.000Z</published>
     <updated>2019-03-19T00:25:32.769Z</updated>
     
@@ -139,10 +166,10 @@
   
   <entry>
     <title>自定义View(二)--onLayout</title>
-    <link href="http://yoursite.com/2019/03/16/android/zi-ding-yi-view-er-onlayout/"/>
-    <id>http://yoursite.com/2019/03/16/android/zi-ding-yi-view-er-onlayout/</id>
+    <link href="http://yoursite.com/2019/03/16/android/zi-ding-yi-kong-jian/zi-ding-yi-view-er-onlayout/"/>
+    <id>http://yoursite.com/2019/03/16/android/zi-ding-yi-kong-jian/zi-ding-yi-view-er-onlayout/</id>
     <published>2019-03-16T15:43:59.000Z</published>
-    <updated>2019-03-19T00:25:20.147Z</updated>
+    <updated>2019-03-23T15:58:42.809Z</updated>
     
     <summary type="html">
     
@@ -165,8 +192,8 @@
   
   <entry>
     <title>自定义View(一)--onMeasure</title>
-    <link href="http://yoursite.com/2019/03/16/android/zi-ding-yi-view-yi-onmeasure/"/>
-    <id>http://yoursite.com/2019/03/16/android/zi-ding-yi-view-yi-onmeasure/</id>
+    <link href="http://yoursite.com/2019/03/16/android/zi-ding-yi-kong-jian/zi-ding-yi-view-yi-onmeasure/"/>
+    <id>http://yoursite.com/2019/03/16/android/zi-ding-yi-kong-jian/zi-ding-yi-view-yi-onmeasure/</id>
     <published>2019-03-16T01:49:42.000Z</published>
     <updated>2019-03-19T00:25:04.482Z</updated>
     

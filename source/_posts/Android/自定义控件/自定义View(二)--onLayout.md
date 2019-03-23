@@ -1,7 +1,7 @@
 ---
 title: 自定义View(二)--onLayout
 top: false
-cover: true
+cover: false
 categories: Android
 tags:
   - View

@@ -1,6 +1,6 @@
 ---
 title: 自定义View(六)--Paint
-top: false
+top: true
 cover: true
 categories: Android
 tags:

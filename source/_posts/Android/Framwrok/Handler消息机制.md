@@ -385,7 +385,7 @@ private static void handleCallback(Message message) {
 ```
 
 ### 总结
-- 整个消息机制中, 涉及到了 Handler、Message、Looper、ThreadLoacal、MessageQueue等对象
+- 整个消息机制中, 涉及到了 Handler、Message、Looper、ThreadLocal、MessageQueue等对象
 - Message就是需要传递的消息, 里面可以携带数据;
 - Handler是一个面向开发者的辅助类, 平时我们就用它发送和处理消息;
 - MessageQueue里面维护了一个消息队列(其实是一个单链表结构). 我们通过Handler发送消息时, 其实最终也是调用了 MessageQueue的方法将消息添加到队列中.

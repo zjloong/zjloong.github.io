@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-24T05:32:06.070Z</updated>
+  <updated>2019-03-24T09:18:45.400Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>HandlerThread&amp;IntentService</title>
+    <link href="http://yoursite.com/2019/03/24/android/framwrok/handlerthead-intentservice/"/>
+    <id>http://yoursite.com/2019/03/24/android/framwrok/handlerthead-intentservice/</id>
+    <published>2019-03-24T09:17:36.000Z</published>
+    <updated>2019-03-24T09:18:45.400Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;在处理多个异步任务时, 有两种选择. 一种是并行, 这种情况可以使用线程池; 另一种是串行, 可以使用 HandlerThread来实现. 顾名思意, HandlerThread继承自Thread, 本质上也是一个线程. &lt;/p&gt;
+&lt;h3
+        
+      
+    
+    </summary>
+    
+      <category term="Android" scheme="http://yoursite.com/categories/Android/"/>
+    
+    
+      <category term="IntentService" scheme="http://yoursite.com/tags/IntentService/"/>
+    
+      <category term="HandlerThread" scheme="http://yoursite.com/tags/HandlerThread/"/>
+    
+  </entry>
   
   <entry>
     <title>TheadLocal源码分析</title>

@@ -765,7 +765,7 @@ handler<span class="token punctuation">.</span><span class="token function">post
 <span class="token punctuation">}</span>
 </code></pre>
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul>
-<li>整个消息机制中, 涉及到了 Handler、Message、Looper、ThreadLoacal、MessageQueue等对象</li>
+<li>整个消息机制中, 涉及到了 Handler、Message、Looper、ThreadLocal、MessageQueue等对象</li>
 <li>Message就是需要传递的消息, 里面可以携带数据;</li>
 <li>Handler是一个面向开发者的辅助类, 平时我们就用它发送和处理消息;</li>
 <li>MessageQueue里面维护了一个消息队列(其实是一个单链表结构). 我们通过Handler发送消息时, 其实最终也是调用了 MessageQueue的方法将消息添加到队列中.</li>
@@ -985,26 +985,24 @@ handler<span class="token punctuation">.</span><span class="token function">post
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
-            </div>
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/03/23/android/framwrok/handler-xiao-xi-ji-zhi/">
+                <a href="/2019/03/24/android/framwrok/theadlocal-yuan-ma-fen-xi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="Handler消息机制">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="TheadLocal源码分析">
                         
-                        <span class="card-title">Handler消息机制</span>
+                        <span class="card-title">TheadLocal源码分析</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">说起Android的消息处理机制, Handler肯定是无法被忽略的一个点. 通过Handler收发消息可以非常方便的实现线程间通信功能.
-Handler的基本使用方式实际开发中, Handler的使用方式通常是这样的:
-Handler h</div>
+                    <div class="summary">默认情况下, 多线程间数据是共享的, Java中也提供了相关的同步机制用于多线程数据共享造成的数据安全性问题. 同时考虑到某些需要线程间数据隔离的场景, 也提供了ThreadLocal让我们可以管理属于线程私有的数据.
+ThreadLoca</div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-03-23
-                            </span>
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-03-24
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -1017,12 +1015,11 @@ Handler h</div>
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Handler/" target="_blank">
-                        <span class="chip bg-color">Handler</span>
+                    <a href="/tags/ThreadLocal/" target="_blank">
+                        <span class="chip bg-color">ThreadLocal</span>
                     </a>
                     
                 </div>
@@ -1218,7 +1215,7 @@ public Paint()
 </span>
             
                 &nbsp;&nbsp;&nbsp;<i class="fa fa-area-chart"></i>&nbsp;总字数:&nbsp;
-                <span class="white-color">15.4k</span>
+                <span class="white-color">17.2k</span>
             
             <br>Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a> 
             &nbsp;|&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">hexo-theme-matery</a>

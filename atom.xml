@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-23T16:19:04.811Z</updated>
+  <updated>2019-03-24T05:29:40.237Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>TheadLocal源码分析</title>
+    <link href="http://yoursite.com/2019/03/24/android/framwrok/theadlocal-yuan-ma-fen-xi/"/>
+    <id>http://yoursite.com/2019/03/24/android/framwrok/theadlocal-yuan-ma-fen-xi/</id>
+    <published>2019-03-24T02:40:36.000Z</published>
+    <updated>2019-03-24T05:29:40.237Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;默认情况下, 多线程间数据是共享的, Java中也提供了相关的同步机制用于多线程数据共享造成的数据安全性问题. 同时考虑到某些需要线程间数据隔离的场景, 也提供了ThreadLocal让我们可以管理属于线程私有的数据.&lt;/p&gt;
+&lt;h3
+        
+      
+    
+    </summary>
+    
+      <category term="Android" scheme="http://yoursite.com/categories/Android/"/>
+    
+    
+      <category term="ThreadLocal" scheme="http://yoursite.com/tags/ThreadLocal/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Handler消息机制</title>
     <link href="http://yoursite.com/2019/03/23/android/framwrok/handler-xiao-xi-ji-zhi/"/>
     <id>http://yoursite.com/2019/03/23/android/framwrok/handler-xiao-xi-ji-zhi/</id>
     <published>2019-03-23T15:25:59.000Z</published>
-    <updated>2019-03-23T16:19:04.811Z</updated>
+    <updated>2019-03-24T02:46:27.743Z</updated>
     
     <summary type="html">
     

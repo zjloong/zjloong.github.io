@@ -518,7 +518,7 @@ HandlerT">
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p>可以发现HandlerThread其实就是帮我们完成了Looper相关的初始化和循环操作, 另外还提供了两个退出Looper的方法, 让我们在合适的实际可以用它们回收资源. 下面再看下 Looper 的 quit 和 quitSafely 方法:</p>
+<p>可以发现HandlerThread其实就是帮我们完成了Looper相关的初始化和循环操作, 另外还提供了两个退出Looper的方法, 让我们在合适的时机可以用它们回收资源. 下面再看下 Looper 的 quit 和 quitSafely 方法:</p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">quit</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     mQueue<span class="token punctuation">.</span><span class="token function">quit</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
@@ -880,25 +880,24 @@ HandlerT">
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
-            </div>
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/03/24/android/framwrok/handlerthead-intentservice/">
+                <a href="/2019/03/26/android/framwrok/toast-yuan-ma-fen-xi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="HandlerThread&IntentService">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Toast源码分析">
                         
-                        <span class="card-title">HandlerThread&IntentService</span>
+                        <span class="card-title">Toast源码分析</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">在处理多个异步任务时, 有两种选择. 一种是并行, 这种情况可以使用线程池; 另一种是串行, 可以使用 HandlerThread来实现. 顾名思意, HandlerThread继承自Thread, 本质上也是一个线程. 
-HandlerT</div>
+                    <div class="summary">Toast作为向用户展示提示信息的一种方式, 既不会像Dialog一样打断用户的操作体验, 也不会响应任何点击事件, 并且会在短暂的显示之后自动消失. 因此常常会用来显示一些不是非常重要的提示.
+Toast的用法最简单的用法, 只需一行代码</div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-03-24
-                            </span>
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-03-26
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -911,16 +910,15 @@ HandlerT</div>
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/IntentService/" target="_blank">
-                        <span class="chip bg-color">IntentService</span>
+                    <a href="/tags/Toast/" target="_blank">
+                        <span class="chip bg-color">Toast</span>
                     </a>
                     
-                    <a href="/tags/HandlerThread/" target="_blank">
-                        <span class="chip bg-color">HandlerThread</span>
+                    <a href="/tags/BadTokenException/" target="_blank">
+                        <span class="chip bg-color">BadTokenException</span>
                     </a>
                     
                 </div>
@@ -1106,7 +1104,7 @@ ThreadLoca</div>
 </span>
             
                 &nbsp;&nbsp;&nbsp;<i class="fa fa-area-chart"></i>&nbsp;总字数:&nbsp;
-                <span class="white-color">18.5k</span>
+                <span class="white-color">20.9k</span>
             
             <br>Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a> 
             &nbsp;|&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">hexo-theme-matery</a>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-24T09:18:45.400Z</updated>
+  <updated>2019-03-26T04:39:54.119Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,40 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Toast源码分析</title>
+    <link href="http://yoursite.com/2019/03/26/android/framwrok/toast-yuan-ma-fen-xi/"/>
+    <id>http://yoursite.com/2019/03/26/android/framwrok/toast-yuan-ma-fen-xi/</id>
+    <published>2019-03-26T04:39:36.000Z</published>
+    <updated>2019-03-26T04:39:54.119Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Toast作为向用户展示提示信息的一种方式, 既不会像Dialog一样打断用户的操作体验, 也不会响应任何点击事件, 并且会在短暂的显示之后自动消失. 因此常常会用来显示一些不是非常重要的提示.&lt;/p&gt;
+&lt;h3 id=&quot;Toast的用法&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="Android" scheme="http://yoursite.com/categories/Android/"/>
+    
+    
+      <category term="Toast" scheme="http://yoursite.com/tags/Toast/"/>
+    
+      <category term="BadTokenException" scheme="http://yoursite.com/tags/BadTokenException/"/>
+    
+  </entry>
+  
+  <entry>
     <title>HandlerThread&amp;IntentService</title>
     <link href="http://yoursite.com/2019/03/24/android/framwrok/handlerthead-intentservice/"/>
     <id>http://yoursite.com/2019/03/24/android/framwrok/handlerthead-intentservice/</id>
     <published>2019-03-24T09:17:36.000Z</published>
-    <updated>2019-03-24T09:18:45.400Z</updated>
+    <updated>2019-03-24T09:23:29.173Z</updated>
     
     <summary type="html">
     

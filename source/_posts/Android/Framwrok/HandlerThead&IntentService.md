@@ -97,7 +97,7 @@ public class HandlerThread extends Thread {
 }
 ```
 
-可以发现HandlerThread其实就是帮我们完成了Looper相关的初始化和循环操作, 另外还提供了两个退出Looper的方法, 让我们在合适的实际可以用它们回收资源. 下面再看下 Looper 的 quit 和 quitSafely 方法:
+可以发现HandlerThread其实就是帮我们完成了Looper相关的初始化和循环操作, 另外还提供了两个退出Looper的方法, 让我们在合适的时机可以用它们回收资源. 下面再看下 Looper 的 quit 和 quitSafely 方法:
 ```java
 public void quit() {
     mQueue.quit(false);

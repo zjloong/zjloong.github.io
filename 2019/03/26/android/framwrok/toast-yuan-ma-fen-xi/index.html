@@ -414,7 +414,7 @@ Toast的用法最简单的用法, 只需一行代码">
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        2.4k
+                        2.3k
                     </div>
                     
 
@@ -553,13 +553,12 @@ Toast的用法最简单的用法, 只需一行代码">
          params<span class="token punctuation">.</span>flags <span class="token operator">=</span> WindowManager<span class="token punctuation">.</span>LayoutParams<span class="token punctuation">.</span>FLAG_KEEP_SCREEN_ON
                     <span class="token operator">|</span> WindowManager<span class="token punctuation">.</span>LayoutParams<span class="token punctuation">.</span>FLAG_NOT_FOCUSABLE
                     <span class="token operator">|</span> WindowManager<span class="token punctuation">.</span>LayoutParams<span class="token punctuation">.</span>FLAG_NOT_TOUCHABLE<span class="token punctuation">;</span>
-        <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token punctuation">(</span>设置一个布局属性<span class="token punctuation">)</span>省略 <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+        <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token punctuation">(</span>设置一些布局属性<span class="token punctuation">)</span>省略 <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
         <span class="token keyword">if</span> <span class="token punctuation">(</span>looper <span class="token operator">==</span> null<span class="token punctuation">)</span> <span class="token punctuation">{</span>
             looper <span class="token operator">=</span> Looper<span class="token punctuation">.</span><span class="token function">myLooper</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
             <span class="token keyword">if</span> <span class="token punctuation">(</span>looper <span class="token operator">==</span> null<span class="token punctuation">)</span> <span class="token punctuation">{</span>
                 <span class="token comment" spellcheck="true">// 需要 Looper 来处理消息</span>
-                <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">RuntimeException</span><span class="token punctuation">(</span>
-                        <span class="token string">"Can't toast on a thread that has not called Looper.prepare()"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">RuntimeException</span><span class="token punctuation">(</span><span class="token string">"Can't toast on a thread that has not called Looper.prepare()"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
             <span class="token punctuation">}</span>
         <span class="token punctuation">}</span>
         <span class="token comment" spellcheck="true">// Handler将在Looper所在的线程处理消息</span>
@@ -573,14 +572,14 @@ Toast的用法最简单的用法, 只需一行代码">
 <p>弄清楚这些类的关系和各自的作用后, 再继续研究enqueueToast方法.</p>
 <h3 id="NotificationManagerService里面的-enqueueToast"><a href="#NotificationManagerService里面的-enqueueToast" class="headerlink" title="NotificationManagerService里面的 enqueueToast"></a>NotificationManagerService里面的 enqueueToast</h3><pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">enqueueToast</span><span class="token punctuation">(</span>String pkg<span class="token punctuation">,</span> ITransientNotification callback<span class="token punctuation">,</span> <span class="token keyword">int</span> duration<span class="token punctuation">)</span><span class="token punctuation">{</span>
     <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> 
-    <span class="token comment" spellcheck="true">// 如果包名和TN不能为空</span>
+    <span class="token comment" spellcheck="true">// 包名和TN不能为空</span>
     <span class="token keyword">if</span> <span class="token punctuation">(</span>pkg <span class="token operator">==</span> null <span class="token operator">||</span> callback <span class="token operator">==</span> null<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         Slog<span class="token punctuation">.</span><span class="token function">e</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">"Not doing toast. pkg="</span> <span class="token operator">+</span> pkg <span class="token operator">+</span> <span class="token string">" callback="</span> <span class="token operator">+</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token keyword">return</span> <span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
     <span class="token comment" spellcheck="true">// 是否系统Toast</span>
     <span class="token keyword">final</span> <span class="token keyword">boolean</span> isSystemToast <span class="token operator">=</span> <span class="token function">isCallerSystemOrPhone</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token punctuation">(</span><span class="token string">"android"</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>pkg<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token comment" spellcheck="true">// 用于是否禁用了 Toast权限</span>
+    <span class="token comment" spellcheck="true">// 用户是否禁用了 Toast权限</span>
     <span class="token keyword">final</span> <span class="token keyword">boolean</span> isPackageSuspended <span class="token operator">=</span> <span class="token function">isPackageSuspendedForUser</span><span class="token punctuation">(</span>pkg<span class="token punctuation">,</span> Binder<span class="token punctuation">.</span><span class="token function">getCallingUid</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token comment" spellcheck="true">// 如果不是系统应用, 且用户禁用了Toast, 则不处理后续逻辑</span>
     <span class="token keyword">if</span> <span class="token punctuation">(</span>ENABLE_BLOCKED_TOASTS <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>isSystemToast <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">areNotificationsEnabledForPackage</span><span class="token punctuation">(</span>pkg<span class="token punctuation">,</span> Binder<span class="token punctuation">.</span><span class="token function">getCallingUid</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">||</span> isPackageSuspended<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -628,10 +627,9 @@ Toast的用法最简单的用法, 只需一行代码">
 </code></pre>
 <p>继续看 showNextToastLocked 方法:</p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">void</span> <span class="token function">showNextToastLocked</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token comment" spellcheck="true">// 去除队列最前面的 ToastRecord</span>
+    <span class="token comment" spellcheck="true">// 取出队列最前面的 ToastRecord</span>
     ToastRecord record <span class="token operator">=</span> mToastQueue<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">while</span> <span class="token punctuation">(</span>record <span class="token operator">!=</span> null<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>DBG<span class="token punctuation">)</span> Slog<span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">"Show pkg="</span> <span class="token operator">+</span> record<span class="token punctuation">.</span>pkg <span class="token operator">+</span> <span class="token string">" callback="</span> <span class="token operator">+</span> record<span class="token punctuation">.</span>callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token keyword">try</span> <span class="token punctuation">{</span>
             <span class="token comment" spellcheck="true">// 回调到 TN, 并传入了 token  (因为Binder可以跨进程通信)</span>
             record<span class="token punctuation">.</span>callback<span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span>record<span class="token punctuation">.</span>token<span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -639,8 +637,6 @@ Toast的用法最简单的用法, 只需一行代码">
             <span class="token function">scheduleTimeoutLocked</span><span class="token punctuation">(</span>record<span class="token punctuation">)</span><span class="token punctuation">;</span>
             <span class="token keyword">return</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">RemoteException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            Slog<span class="token punctuation">.</span><span class="token function">w</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">"Object died trying to show notification "</span> <span class="token operator">+</span> record<span class="token punctuation">.</span>callback
-                    <span class="token operator">+</span> <span class="token string">" in package "</span> <span class="token operator">+</span> record<span class="token punctuation">.</span>pkg<span class="token punctuation">)</span><span class="token punctuation">;</span>
             <span class="token comment" spellcheck="true">// remove it from the list and let the process die</span>
             <span class="token keyword">int</span> index <span class="token operator">=</span> mToastQueue<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>record<span class="token punctuation">)</span><span class="token punctuation">;</span>
             <span class="token keyword">if</span> <span class="token punctuation">(</span>index <span class="token operator">>=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -667,7 +663,6 @@ Toast的用法最简单的用法, 只需一行代码">
 </code></pre>
 <p>搜索关键字 MESSAGE_TIMEOUT, 发现mHandler在处理该消息时, 调用了下面的方法:</p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">handleTimeout</span><span class="token punctuation">(</span>ToastRecord record<span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>DBG<span class="token punctuation">)</span> Slog<span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">"Timeout pkg="</span> <span class="token operator">+</span> record<span class="token punctuation">.</span>pkg <span class="token operator">+</span> <span class="token string">" callback="</span> <span class="token operator">+</span> record<span class="token punctuation">.</span>callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">synchronized</span> <span class="token punctuation">(</span>mToastQueue<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token comment" spellcheck="true">// 找出 ToastRecord 在队列中的索引</span>
         <span class="token keyword">int</span> index <span class="token operator">=</span> <span class="token function">indexOfToastLocked</span><span class="token punctuation">(</span>record<span class="token punctuation">.</span>pkg<span class="token punctuation">,</span> record<span class="token punctuation">.</span>callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -684,10 +679,7 @@ Toast的用法最简单的用法, 只需一行代码">
     <span class="token keyword">try</span> <span class="token punctuation">{</span>
         <span class="token comment" spellcheck="true">// 回调 Toast.TN, 隐藏 toast</span>
         record<span class="token punctuation">.</span>callback<span class="token punctuation">.</span><span class="token function">hide</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">RemoteException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        Slog<span class="token punctuation">.</span><span class="token function">w</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">"Object died trying to hide notification "</span> <span class="token operator">+</span> record<span class="token punctuation">.</span>callback
-                <span class="token operator">+</span> <span class="token string">" in package "</span> <span class="token operator">+</span> record<span class="token punctuation">.</span>pkg<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">RemoteException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
     <span class="token comment" spellcheck="true">// 移除 ToastRecord</span>
     ToastRecord lastToast <span class="token operator">=</span> mToastQueue<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span>index<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token comment" spellcheck="true">// 移除 token</span>
@@ -701,12 +693,10 @@ Toast的用法最简单的用法, 只需一行代码">
 </code></pre>
 <p>回到app进程, 看看TN最后是怎么处理Toast的.</p>
 <h3 id="TN的show方法和hide方法"><a href="#TN的show方法和hide方法" class="headerlink" title="TN的show方法和hide方法"></a>TN的show方法和hide方法</h3><pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">show</span><span class="token punctuation">(</span>IBinder windowToken<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>localLOGV<span class="token punctuation">)</span> Log<span class="token punctuation">.</span><span class="token function">v</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">"SHOW: "</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     mHandler<span class="token punctuation">.</span><span class="token function">obtainMessage</span><span class="token punctuation">(</span>SHOW<span class="token punctuation">,</span> windowToken<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">sendToTarget</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
 <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">hide</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>localLOGV<span class="token punctuation">)</span> Log<span class="token punctuation">.</span><span class="token function">v</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">"HIDE: "</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     mHandler<span class="token punctuation">.</span><span class="token function">obtainMessage</span><span class="token punctuation">(</span>HIDE<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">sendToTarget</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
@@ -733,13 +723,12 @@ Toast的用法最简单的用法, 只需一行代码">
         <span class="token keyword">if</span> <span class="token punctuation">(</span>mView<span class="token punctuation">.</span><span class="token function">getParent</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">!=</span> null<span class="token punctuation">)</span> <span class="token punctuation">{</span>
             mWM<span class="token punctuation">.</span><span class="token function">removeView</span><span class="token punctuation">(</span>mView<span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>localLOGV<span class="token punctuation">)</span> Log<span class="token punctuation">.</span><span class="token function">v</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">"ADD! "</span> <span class="token operator">+</span> mView <span class="token operator">+</span> <span class="token string">" in "</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token keyword">try</span> <span class="token punctuation">{</span>
             <span class="token comment" spellcheck="true">// 显示toast. 通过 WindowManager 添加 view 实现</span>
             mWM<span class="token punctuation">.</span><span class="token function">addView</span><span class="token punctuation">(</span>mView<span class="token punctuation">,</span> mParams<span class="token punctuation">)</span><span class="token punctuation">;</span>
             <span class="token function">trySendAccessibilityEvent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">WindowManager<span class="token punctuation">.</span>BadTokenException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token comment" spellcheck="true">// 在主线程卡顿时, 可能由于消息不能及时处理, 导致在向窗口addView时, NotificationManagerService移除了token, 此时会出现此异常</span>
+            <span class="token comment" spellcheck="true">// 在主线程卡顿时, 可能由于消息不能及时处理, 导致在向窗口addView时, NotificationManagerService已经移除了token, 此时会出现此异常</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
@@ -756,7 +745,7 @@ Toast的用法最简单的用法, 只需一行代码">
 <span class="token punctuation">}</span>
 </code></pre>
 <p>关于Toast的分析就到这了, 下面补充一个BadTokenException的异常问题. </p>
-<h3 id="BadTokenException"><a href="#BadTokenException" class="headerlink" title="BadTokenException"></a>BadTokenException</h3><p>通过上面的分析, 我们已经知道了产生该异常出现的原因, 并且这里发现源码已经对该异常进行了捕获, 但是在Android7.1上,还是需要我们自己手动解决一下. 直接捕获Toast的show方法是没用的, 因为其内部经过两次IPC通信之后, 真正显示Toast的逻辑并不在这里. 我们需要通过反射拿到mTN里面的mHandler对象, 直接在其处理消息的过程中进行捕获.</p>
+<h3 id="BadTokenException"><a href="#BadTokenException" class="headerlink" title="BadTokenException"></a>BadTokenException</h3><p>通过上面的分析, 我们已经知道了产生该异常的原因, 并且发现源码中已经对异常进行了捕获, 但是在Android7.1上,还是需要我们自己手动解决一下. 直接捕获Toast的show方法是没用的, 因为其内部经过两次IPC通信之后, 真正显示Toast的逻辑并不在show方法中. 我们需要通过反射拿到mTN里面的mHandler对象, 直接在其处理消息的过程中进行捕获.</p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token function">isSdk25</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     Field tnField <span class="token operator">=</span> Toast<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">.</span><span class="token function">getDeclaredField</span><span class="token punctuation">(</span><span class="token string">"mTN"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     tnField<span class="token punctuation">.</span><span class="token function">setAccessible</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1209,7 +1198,7 @@ HandlerT</div>
 </span>
             
                 &nbsp;&nbsp;&nbsp;<i class="fa fa-area-chart"></i>&nbsp;总字数:&nbsp;
-                <span class="white-color">20.9k</span>
+                <span class="white-color">20.8k</span>
             
             <br>Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a> 
             &nbsp;|&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">hexo-theme-matery</a>

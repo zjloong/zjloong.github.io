@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-26T05:34:57.705Z</updated>
+  <updated>2019-03-27T05:53:58.584Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AsyncTask</title>
+    <link href="http://yoursite.com/2019/03/27/android/framwrok/activity-qi-dong-liu-cheng/"/>
+    <id>http://yoursite.com/2019/03/27/android/framwrok/activity-qi-dong-liu-cheng/</id>
+    <published>2019-03-27T05:52:23.000Z</published>
+    <updated>2019-03-27T05:53:58.584Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;AsyncTask 是一个轻量级的异步任务类. AsyncTask内部封装了线程池和Handler, 让我们在执行异步任务时, 可以比较容易的将任务进度以及执行结果回调到UI线程.&lt;/p&gt;
+&lt;h3 id=&quot;AsyncTask的使用方式&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="Android" scheme="http://yoursite.com/categories/Android/"/>
+    
+    
+      <category term="AsyncTask" scheme="http://yoursite.com/tags/AsyncTask/"/>
+    
+  </entry>
   
   <entry>
     <title>Toast源码分析</title>

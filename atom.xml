@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-27T05:56:37.453Z</updated>
+  <updated>2019-04-04T02:56:31.731Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>HashMap</title>
+    <link href="http://yoursite.com/2019/04/04/android/shu-ju-jie-gou/hashmap/"/>
+    <id>http://yoursite.com/2019/04/04/android/shu-ju-jie-gou/hashmap/</id>
+    <published>2019-04-04T02:45:45.000Z</published>
+    <updated>2019-04-04T02:56:31.731Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;HashMap作为日常开发中用的最多的集合之一, 非常有必要对它的内部原理进行一下了解, 同时源码里的一些写法也是非常值得学习的.&lt;/p&gt;
+&lt;h3 id=&quot;HashMap中的一些常量和变量&quot;&gt;&lt;a href=&quot;#HashMap中的一些常量和变量&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Android" scheme="http://yoursite.com/categories/Android/"/>
+    
+    
+      <category term="HashMap" scheme="http://yoursite.com/tags/HashMap/"/>
+    
+  </entry>
   
   <entry>
     <title>AsyncTask</title>

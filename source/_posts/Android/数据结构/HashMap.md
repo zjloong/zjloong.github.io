@@ -124,7 +124,7 @@ static final int tableSizeFor(int cap) {
 }
 ```
 
-### 插入
+### 增加
 
 #### put & putIfAbsent
 ```java
@@ -184,6 +184,7 @@ final V putVal(int hash, K key, V value, boolean onlyIfAbsent, boolean evict) {
             // 只有onlyIfAbsent为false时, 才会替换
             if (!onlyIfAbsent || oldValue == null)
                 e.value = value;
+            // 空方法, 由其子类 LinkedHashMap
             afterNodeAccess(e);
             return oldValue;
         }
@@ -193,6 +194,7 @@ final V putVal(int hash, K key, V value, boolean onlyIfAbsent, boolean evict) {
     // 如果键值对个数超出了阈值, 则需要扩容
     if (++size > threshold)
         resize();
+    // 空方法, 由其子类 LinkedHashMap
     afterNodeInsertion(evict);
     return null;
 }
@@ -330,6 +332,7 @@ public V replace(K key, V value) {
     if ((e = getNode(hash(key), key)) != null) {
         V oldValue = e.value;
         e.value = value;
+        // 空方法, 由其子类 LinkedHashMap
         afterNodeAccess(e);
         return oldValue;
     }
@@ -388,6 +391,7 @@ final Node<K,V> removeNode(int hash, Object key, Object value, boolean matchValu
                 p.next = node.next;
             ++modCount;
             --size;
+            // 空方法, 由其子类 LinkedHashMap
             afterNodeRemoval(node);
             return node;
         }

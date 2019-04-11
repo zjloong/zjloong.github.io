@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-04T02:56:31.731Z</updated>
+  <updated>2019-04-11T09:24:23.179Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,64 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>LruCache</title>
+    <link href="http://yoursite.com/2019/04/11/android/shu-ju-jie-gou/lrucache/"/>
+    <id>http://yoursite.com/2019/04/11/android/shu-ju-jie-gou/lrucache/</id>
+    <published>2019-04-11T08:29:33.000Z</published>
+    <updated>2019-04-11T09:24:23.179Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;使用缓存有助于提高应用的体验, 但是内存的大小是有限的, 所以有必要考虑如何更好更合理的对缓存进行管理.  LruCache是一种常用的缓存策略, 它利用 LinkedHashMap 的特点, 在缓存大小超出阈值时, 对最老的缓存数据进行清理.
+        
+      
+    
+    </summary>
+    
+      <category term="Android" scheme="http://yoursite.com/categories/Android/"/>
+    
+    
+      <category term="LruCache" scheme="http://yoursite.com/tags/LruCache/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>LinkedHashMap</title>
+    <link href="http://yoursite.com/2019/04/04/android/shu-ju-jie-gou/linkedhashmap/"/>
+    <id>http://yoursite.com/2019/04/04/android/shu-ju-jie-gou/linkedhashmap/</id>
+    <published>2019-04-04T07:25:33.000Z</published>
+    <updated>2019-04-11T08:10:09.118Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;LinkedHashMap继承自HashMap, 它的大部分功能都维持了HashMap的原样, 同时在此基础上又维护了一个双向链表结构. 通过对链表的操作, 可以实现LRU、FIFO等功能.&lt;/p&gt;
+&lt;h3 id=&quot;LinkedHashMap中的节点&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="Android" scheme="http://yoursite.com/categories/Android/"/>
+    
+    
+      <category term="LinkedHashMap" scheme="http://yoursite.com/tags/LinkedHashMap/"/>
+    
+  </entry>
+  
+  <entry>
     <title>HashMap</title>
     <link href="http://yoursite.com/2019/04/04/android/shu-ju-jie-gou/hashmap/"/>
     <id>http://yoursite.com/2019/04/04/android/shu-ju-jie-gou/hashmap/</id>
     <published>2019-04-04T02:45:45.000Z</published>
-    <updated>2019-04-04T02:56:31.731Z</updated>
+    <updated>2019-04-04T06:06:54.076Z</updated>
     
     <summary type="html">
     

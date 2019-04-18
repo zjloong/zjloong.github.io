@@ -1,7 +1,7 @@
 ---
 title: TheadLocal源码分析
 top: false
-cover: false
+cover: true
 categories: Android
 tags:
   - ThreadLocal

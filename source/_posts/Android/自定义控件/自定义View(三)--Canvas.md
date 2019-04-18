@@ -1,7 +1,7 @@
 ---
 title: 自定义View(三)--Canvas
 top: false
-cover: true
+cover: false
 categories: Android
 tags:
   - View

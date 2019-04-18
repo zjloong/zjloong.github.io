@@ -1,7 +1,7 @@
 ---
 title: HashMap
-top: false
-cover: false
+top: true
+cover: true
 categories: Android
 tags:
   - HashMap

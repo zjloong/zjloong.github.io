@@ -8,7 +8,7 @@ tags:
 date: 2019-04-04 15:25:33
 img:
 coverImg:
-summary: LinkedHashMap继承自HashMap, 它的大部分功能都维持了HashMap的原样, 同时在此基础上又维护了一个双向链表结构. 通过对链表的操作, 可以实现LRU、FIFO等功能.
+summary: 
 ---
 
 LinkedHashMap继承自HashMap, 它的大部分功能都维持了HashMap的原样, 同时在此基础上又维护了一个双向链表结构. 通过对链表的操作, 可以实现LRU、FIFO等功能.

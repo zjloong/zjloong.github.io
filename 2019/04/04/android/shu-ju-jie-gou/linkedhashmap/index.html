@@ -819,20 +819,22 @@ LinkedHashMap中的节点// 继承自 ">
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/04/11/android/shu-ju-jie-gou/lrucache/">
+                <a href="/2019/04/06/android/shu-ju-jie-gou/concurrenthashmap/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="LruCache">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="ConcurrentHashMap">
                         
-                        <span class="card-title">LruCache</span>
+                        <span class="card-title">ConcurrentHashMap</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">使用缓存有助于提高应用的体验, 但是内存的大小是有限的, 所以有必要考虑如何更好更合理的对缓存进行管理.  LruCache是一种常用的缓存策略, 它利用 LinkedHashMap 的特点, 在缓存大小超出阈值时, 对最老的缓存数据进行清</div>
+                    <div class="summary">HashMap不支持并发, 在多线程的情况下, 推荐使用ConcurrentHashMap. ConcurrentHashMap在JDK8之后采用了CAS和synchronized来保证多线程下的数据安全性.
+CAS
+什么是CAS全称 Co</div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-04-11
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-04-06
                         </span>
                         <span class="publish-author">
                             
@@ -849,8 +851,8 @@ LinkedHashMap中的节点// 继承自 ">
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/LruCache/" target="_blank">
-                        <span class="chip bg-color">LruCache</span>
+                    <a href="/tags/ConcurrentHashMap/" target="_blank">
+                        <span class="chip bg-color">ConcurrentHashMap</span>
                     </a>
                     
                 </div>
@@ -1037,7 +1039,7 @@ static final int DEFAULT</div>
 </span>
             
                 &nbsp;&nbsp;&nbsp;<i class="fa fa-area-chart"></i>&nbsp;总字数:&nbsp;
-                <span class="white-color">28.1k</span>
+                <span class="white-color">33k</span>
             
             <br>Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a> 
             &nbsp;|&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">hexo-theme-matery</a>

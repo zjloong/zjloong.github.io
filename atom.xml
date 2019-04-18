@@ -43,11 +43,38 @@
   </entry>
   
   <entry>
+    <title>ConcurrentHashMap</title>
+    <link href="http://yoursite.com/2019/04/06/android/shu-ju-jie-gou/concurrenthashmap/"/>
+    <id>http://yoursite.com/2019/04/06/android/shu-ju-jie-gou/concurrenthashmap/</id>
+    <published>2019-04-06T11:33:26.000Z</published>
+    <updated>2019-04-18T00:45:50.703Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;HashMap不支持并发, 在多线程的情况下, 推荐使用ConcurrentHashMap. ConcurrentHashMap在JDK8之后采用了CAS和synchronized来保证多线程下的数据安全性.&lt;/p&gt;
+&lt;h3 id=&quot;CAS&quot;&gt;&lt;a href=&quot;#CAS&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Android" scheme="http://yoursite.com/categories/Android/"/>
+    
+    
+      <category term="ConcurrentHashMap" scheme="http://yoursite.com/tags/ConcurrentHashMap/"/>
+    
+  </entry>
+  
+  <entry>
     <title>LinkedHashMap</title>
     <link href="http://yoursite.com/2019/04/04/android/shu-ju-jie-gou/linkedhashmap/"/>
     <id>http://yoursite.com/2019/04/04/android/shu-ju-jie-gou/linkedhashmap/</id>
     <published>2019-04-04T07:25:33.000Z</published>
-    <updated>2019-04-11T08:10:09.118Z</updated>
+    <updated>2019-04-11T09:27:18.503Z</updated>
     
     <summary type="html">
     

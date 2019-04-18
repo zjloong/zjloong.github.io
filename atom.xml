@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-04-11T09:24:23.179Z</updated>
+  <updated>2019-04-18T00:49:54.916Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ConcurrentHashMap</title>
+    <link href="http://yoursite.com/2019/04/16/android/shu-ju-jie-gou/concurrenthashmap/"/>
+    <id>http://yoursite.com/2019/04/16/android/shu-ju-jie-gou/concurrenthashmap/</id>
+    <published>2019-04-16T11:33:26.000Z</published>
+    <updated>2019-04-18T00:49:54.916Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;HashMap不支持并发, 在多线程的情况下, 推荐使用ConcurrentHashMap. ConcurrentHashMap在JDK8之后采用了CAS和synchronized来保证多线程下的数据安全性.&lt;/p&gt;
+&lt;h3 id=&quot;CAS&quot;&gt;&lt;a href=&quot;#CAS&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Android" scheme="http://yoursite.com/categories/Android/"/>
+    
+    
+      <category term="ConcurrentHashMap" scheme="http://yoursite.com/tags/ConcurrentHashMap/"/>
+    
+  </entry>
   
   <entry>
     <title>LruCache</title>
@@ -39,33 +66,6 @@
     
     
       <category term="LruCache" scheme="http://yoursite.com/tags/LruCache/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ConcurrentHashMap</title>
-    <link href="http://yoursite.com/2019/04/06/android/shu-ju-jie-gou/concurrenthashmap/"/>
-    <id>http://yoursite.com/2019/04/06/android/shu-ju-jie-gou/concurrenthashmap/</id>
-    <published>2019-04-06T11:33:26.000Z</published>
-    <updated>2019-04-18T00:45:50.703Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;HashMap不支持并发, 在多线程的情况下, 推荐使用ConcurrentHashMap. ConcurrentHashMap在JDK8之后采用了CAS和synchronized来保证多线程下的数据安全性.&lt;/p&gt;
-&lt;h3 id=&quot;CAS&quot;&gt;&lt;a href=&quot;#CAS&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="Android" scheme="http://yoursite.com/categories/Android/"/>
-    
-    
-      <category term="ConcurrentHashMap" scheme="http://yoursite.com/tags/ConcurrentHashMap/"/>
     
   </entry>
   
@@ -101,7 +101,7 @@
     <link href="http://yoursite.com/2019/04/04/android/shu-ju-jie-gou/hashmap/"/>
     <id>http://yoursite.com/2019/04/04/android/shu-ju-jie-gou/hashmap/</id>
     <published>2019-04-04T02:45:45.000Z</published>
-    <updated>2019-04-04T06:06:54.076Z</updated>
+    <updated>2019-04-18T00:50:02.693Z</updated>
     
     <summary type="html">
     
@@ -155,7 +155,7 @@
     <link href="http://yoursite.com/2019/03/26/android/framwrok/toast-yuan-ma-fen-xi/"/>
     <id>http://yoursite.com/2019/03/26/android/framwrok/toast-yuan-ma-fen-xi/</id>
     <published>2019-03-26T04:39:36.000Z</published>
-    <updated>2019-03-26T05:34:57.705Z</updated>
+    <updated>2019-04-18T00:49:40.920Z</updated>
     
     <summary type="html">
     
@@ -213,7 +213,7 @@
     <link href="http://yoursite.com/2019/03/24/android/framwrok/theadlocal-yuan-ma-fen-xi/"/>
     <id>http://yoursite.com/2019/03/24/android/framwrok/theadlocal-yuan-ma-fen-xi/</id>
     <published>2019-03-24T02:40:36.000Z</published>
-    <updated>2019-03-24T05:32:06.070Z</updated>
+    <updated>2019-04-18T00:50:25.346Z</updated>
     
     <summary type="html">
     
@@ -298,7 +298,7 @@
     <link href="http://yoursite.com/2019/03/18/android/zi-ding-yi-kong-jian/zi-ding-yi-view-wu-drawtext/"/>
     <id>http://yoursite.com/2019/03/18/android/zi-ding-yi-kong-jian/zi-ding-yi-view-wu-drawtext/</id>
     <published>2019-03-18T13:37:09.000Z</published>
-    <updated>2019-03-19T00:24:50.257Z</updated>
+    <updated>2019-04-18T00:48:58.508Z</updated>
     
     <summary type="html">
     
@@ -329,7 +329,7 @@
     <link href="http://yoursite.com/2019/03/17/android/zi-ding-yi-kong-jian/zi-ding-yi-view-si-path/"/>
     <id>http://yoursite.com/2019/03/17/android/zi-ding-yi-kong-jian/zi-ding-yi-view-si-path/</id>
     <published>2019-03-17T08:09:09.000Z</published>
-    <updated>2019-03-19T00:25:45.818Z</updated>
+    <updated>2019-04-18T00:49:08.050Z</updated>
     
     <summary type="html">
     
@@ -360,7 +360,7 @@
     <link href="http://yoursite.com/2019/03/17/android/zi-ding-yi-kong-jian/zi-ding-yi-view-san-canvas/"/>
     <id>http://yoursite.com/2019/03/17/android/zi-ding-yi-kong-jian/zi-ding-yi-view-san-canvas/</id>
     <published>2019-03-17T01:28:28.000Z</published>
-    <updated>2019-03-19T00:25:32.769Z</updated>
+    <updated>2019-04-18T00:49:19.567Z</updated>
     
     <summary type="html">
     
@@ -414,7 +414,7 @@
     <link href="http://yoursite.com/2019/03/16/android/zi-ding-yi-kong-jian/zi-ding-yi-view-yi-onmeasure/"/>
     <id>http://yoursite.com/2019/03/16/android/zi-ding-yi-kong-jian/zi-ding-yi-view-yi-onmeasure/</id>
     <published>2019-03-16T01:49:42.000Z</published>
-    <updated>2019-03-19T00:25:04.482Z</updated>
+    <updated>2019-04-18T00:48:50.398Z</updated>
     
     <summary type="html">
     
